@@ -1,0 +1,20 @@
+<!-- src/app/ejercicios-con-equipo/ejercicios-con-equipo.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ejercicios con Equipo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let exercise of EjerciciosConEquipo | keyvalue">
+    <ion-card (click)="goToExerciseDetail(exercise.key, 'equipment')">
+      <ion-card-header>
+        <ion-card-title>{{ exercise.value.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ exercise.value.description }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

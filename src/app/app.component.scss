@@ -29,7 +29,6 @@ ion-menu.md ion-list#inbox-list {
 ion-menu.md ion-list#inbox-list ion-list-header {
   font-size: 22px;
   font-weight: 600;
-
   min-height: 20px;
 }
 
@@ -116,4 +115,16 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+/* src/global.scss o src/theme/variables.scss */
+
+body {
+  --background: #ffffff;
+  --ion-color-primary: #3880ff;
+}
+
+body.dark {
+  --background: #222428; /* Fondo oscuro */
+  --ion-color-primary: #007aff; /* Color primario oscuro */
 }
