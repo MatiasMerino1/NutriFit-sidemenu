@@ -128,3 +128,7 @@ body.dark {
   --background: #222428; /* Fondo oscuro */
   --ion-color-primary: #007aff; /* Color primario oscuro */
 }
+
+ion-item {
+  --transition: none;
+}

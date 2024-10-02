@@ -12,10 +12,11 @@
             </ion-item>
           </ion-menu-toggle>
           <!-- Botón para alternar modo oscuro/claro -->
-        <ion-button expand="full" (click)="toggleDarkMode()" color="primary">
-          <ion-icon [name]="isDarkMode ? 'sunny' : 'moon'"></ion-icon>
-          {{ isDarkMode ? 'Modo Claro' : 'Modo Oscuro' }}
-        </ion-button>
+          <ion-item>
+            <ion-toggle [(ngModel)]="paletteToggle" (ionChange)="toggleChange($event)" justify="space-between"
+              >Dark Mode</ion-toggle
+            >
+          </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>
