@@ -25,7 +25,7 @@ export const routes: Routes = [
     loadComponent: () => import('./folder/ejercicios-sin-equipo/ejercicios-sin-equipo.page').then( m => m.EjerciciosSinEquipoPage)
   },
   {
-    path: 'exercise-detail',
+    path: 'exercise-detail/',
     loadComponent: () => import('./folder/exercise-detail/exercise-detail.page').then( m => m.ExerciseDetailPage)
   },
 ];

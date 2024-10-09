@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardTitle, IonCardHeader, IonCardContent, NavController } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardTitle, IonCardHeader, IonCardContent, NavController, IonItem, IonButtons, IonMenuButton } from '@ionic/angular/standalone';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -13,7 +13,7 @@ import { Injectable } from '@angular/core';
   templateUrl: './ejercicios-sin-equipo.page.html',
   styleUrls: ['./ejercicios-sin-equipo.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard,
+  imports: [IonItem, IonButtons, IonMenuButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard,
             IonCardTitle, IonCardHeader, IonCardContent]
 })
 export class EjerciciosSinEquipoPage {
@@ -31,7 +31,7 @@ export class EjerciciosSinEquipoPage {
 
   constructor(private navCtrl: NavController) {}
 
-  goToExerciseDetail(id: string, type: string) {
-    this.navCtrl.navigateForward(`/exercise-detail/${id}/${type}`);
+  goToExerciseDetail(key: string, type: string) {
+    this.navCtrl.navigateForward(`/exercise-detail/${key}/${type}`);
   }
 }

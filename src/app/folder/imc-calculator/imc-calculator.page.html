@@ -1,11 +1,16 @@
 <ion-content [fullscreen]="true">
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Calculadora de IMC</ion-title>
-  </ion-toolbar>
-</ion-header>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Calculadora de IMC</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-card-content>
   <form (submit)="calculateIMC()">
     <div class="form-group">
       <label for="height">Altura (cm)</label>
@@ -23,6 +28,8 @@
   <div *ngIf="imc">
     <h2>Tu IMC es: {{ imc | number:'1.2-2' }}</h2>
   </div>
+</ion-card-content>
+</ion-card>
 </ion-content>
 
 </ion-content>
