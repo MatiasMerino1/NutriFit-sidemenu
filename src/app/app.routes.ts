@@ -28,4 +28,8 @@ export const routes: Routes = [
     path: 'exercise-detail/',
     loadComponent: () => import('./folder/exercise-detail/exercise-detail.page').then( m => m.ExerciseDetailPage)
   },
+  {
+    path: 'dieta',
+    loadComponent: () => import('./folder/dieta/dieta.page').then( m => m.DietaPage)
+  },
 ];

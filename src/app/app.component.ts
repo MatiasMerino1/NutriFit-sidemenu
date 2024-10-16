@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     { title: 'Calculadora IMC', url: '/imc-calculator', icon: 'calculator' },
     { title: 'Ejercicios con Equipo', url: '/ejercicios-con-equipo', icon: 'fitness' },
     { title: 'Ejercicios sin Equipo', url: '/ejercicios-sin-equipo', icon: 'person' },
-    { title: 'Recomendaciones de Dieta', url: '/folder/dieta', icon: 'nutrition' },
+    { title: 'Recomendaciones de Dieta', url: '/dieta', icon: 'nutrition' },
   ];
 
   constructor() {

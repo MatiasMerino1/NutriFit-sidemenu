@@ -1,0 +1,65 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Recomendaciones de Dieta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<div>
+  <svg viewBox="0 0 32 32" width="200" height="200">
+    <circle
+      r="16"
+      cx="16"
+      cy="16"
+      fill="transparent"
+      stroke="lightgray"
+      stroke-width="32">
+    </circle>
+    <circle
+      r="16"
+      cx="16"
+      cy="16"
+      fill="transparent"
+      stroke="green"
+      stroke-width="32"
+      [attr.stroke-dasharray]="getPercentage(carbs) + ' 100'"
+      transform="rotate(-90 16 16)">
+    </circle>
+    <circle
+      r="16"
+      cx="16"
+      cy="16"
+      fill="transparent"
+      stroke="blue"
+      stroke-width="32"
+      [attr.stroke-dasharray]="getPercentage(protein) + ' 100'"
+      [attr.stroke-dashoffset]="getPercentage(carbs)"
+      transform="rotate(-90 16 16)">
+    </circle>
+    <circle
+      r="16"
+      cx="16"
+      cy="16"
+      fill="transparent"
+      stroke="red"
+      stroke-width="32"
+      [attr.stroke-dasharray]="getPercentage(fiber) + ' 100'"
+      [attr.stroke-dashoffset]="getPercentage(carbs) + getPercentage(protein)"
+      transform="rotate(-90 16 16)">
+    </circle>
+  </svg>
+</div>
+
+<div>
+  <label>Carbohidratos:</label>
+  <input type="number" [(ngModel)]="carbs" (input)="updateTotal()" />
+
+  <label>Proteínas:</label>
+  <input type="number" [(ngModel)]="protein" (input)="updateTotal()" />
+
+  <label>Fibra:</label>
+  <input type="number" [(ngModel)]="fiber" (input)="updateTotal()" />
+</div>
